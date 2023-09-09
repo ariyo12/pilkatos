@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreatePeriodeTable extends Migration
+class CreateTblStatus extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreatePeriodeTable extends Migration
      */
     public function up()
     {
-        Schema::create('periode', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('tahun');
+        Schema::create('tbl_status', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreatePeriodeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('periode');
+        Schema::dropIfExists('tbl_status');
     }
 }
